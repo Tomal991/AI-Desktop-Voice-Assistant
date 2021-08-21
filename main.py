@@ -99,18 +99,18 @@ if __name__ == "__main__":
             music_dir = 'D:\\Music'
             songs = os.listdir(music_dir)
             speak("Playing Music...")
-            os.startfile(os.path.join(music_dir, songs[0]))
+            os.startfile(os.path.join(music_dir, songs[1]))
 
         elif 'play videos' in query or 'play video' in query:
-            video_dir = 'D:\\React'
+            video_dir = 'D:\\Movies'
             videos = os.listdir(video_dir)
             speak("Playing Video...")
             os.startfile(os.path.join(video_dir, videos[0]))
 
         elif 'who made you' in query or 'who created you' in query or 'who developed you' in query:
-            pic_dir = 'D:\\My pic'
+            pic_dir = 'D:\\Pic'
             pic = os.listdir(pic_dir)
-            webbrowser.open("http://localhost:3000/")
+            webbrowser.open("https://github.com/Tomal991")
             os.startfile(os.path.join(pic_dir, pic[0]))
             speak("Its Intesarul haque Tomal")
 
@@ -153,7 +153,7 @@ if __name__ == "__main__":
             speak("i am here! Please tell me how may I help you sir?")
 
         elif "what's your name" in query or "What is your name" in query:
-            speak("My friends call me friday sir!")
+            speak("My friends call me Jarvis sir!")
 
         elif 'search' in query:
             query = query.replace("search", "")
@@ -208,9 +208,10 @@ if __name__ == "__main__":
             subprocess.call(["shutdown", "/r"])
 
 
-        elif 'joke' in query:
+        elif 'joke' in query or 'tell a joke' in query :
             speak(pyjokes.get_joke())
 
-        elif 'exit' in query or 'bye' in query or 'see you later' in query:
+
+        elif 'exit' in query or 'stop' in query or 'see you later' in query:
             speak("Thanks for giving me your time sir.")
             exit()
