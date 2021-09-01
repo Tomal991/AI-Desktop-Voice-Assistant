@@ -129,7 +129,7 @@ if __name__ == "__main__":
             speak("Opening postman...")
             os.startfile(postmanPath)
 
-        elif 'send a mail' in query:
+        elif 'send a mail' in query or "send a email" in query or "send email" in query:
             try:
                 speak("what should I say?")
                 content = takeCommand()
